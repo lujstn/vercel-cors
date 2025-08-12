@@ -1,0 +1,10 @@
+test/
+.git/
+.gitignore
+.travis.yml
+coverage/
+node_modules/
+.eslintrc
+.eslintignore
+*.log
+.DS_Store

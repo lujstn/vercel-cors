@@ -1,3 +1,34 @@
+## vercel-cors
+
+> [!NOTE] This is a minimal fork of the popular `cors-anywhere` library, with one-click deployment for Vercel.
+> It wraps the CORS Anywhere package in a simple `api/index.js` file, so it can be deployed to Vercel easily. We pass everything through – headers, cookies, the works.
+
+> [!CAUTION] The URL format is different to the original repo.
+> Not much has changed, but we use the following format:
+> `http://myvercel.deployment/?url=[YOUR_URL_HERE]`
+> 
+> This change was made to avoid path formatting errors, which I found to be annoyingly frequent in my own testing. Rather than fighting with paths, it's easier to treat URLs as a param.
+>
+> It's also the same approach adopted by [corsproxy.io](corsproxy.io), making this effectively a free a drop-in replacement in one click.
+
+Install deps with `npm install`.
+
+Run with `vercel dev`.
+
+Deploy with `vercel --prod`, or clicking the button below.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flujstn%2Fvercel-cors)
+
+That's it! Hope this saved you some time.
+
+
+Enjoy 🫡
+
+**Lucas**
+
+--
+
+
 [![Build Status](https://travis-ci.com/Rob--W/cors-anywhere.svg?branch=master)](https://travis-ci.com/Rob--W/cors-anywhere)
 [![Coverage Status](https://coveralls.io/repos/github/Rob--W/cors-anywhere/badge.svg?branch=master)](https://coveralls.io/github/Rob--W/cors-anywhere?branch=master)
 
@@ -32,16 +63,11 @@ cors_proxy.createServer({
 ```
 Request examples:
 
-* `http://localhost:8080/http://google.com/` - Google.com with CORS headers
-* `http://localhost:8080/google.com` - Same as previous.
-* `http://localhost:8080/google.com:443` - Proxies `https://google.com/`
+* `http://localhost:8080/?url=http://google.com/` - Google.com with CORS headers
+* `http://localhost:8080/?url=google.com` - Same as previous.
+* `http://localhost:8080/?url=google.com:443` - Proxies `https://google.com/`
 * `http://localhost:8080/` - Shows usage text, as defined in `lib/help.txt`
 * `http://localhost:8080/favicon.ico` - Replies 404 Not found
-
-Live examples:
-
-* https://cors-anywhere.herokuapp.com/
-* https://robwu.nl/cors-anywhere.html - This demo shows how to use the API.
 
 ## Documentation
 
@@ -171,6 +197,7 @@ node server.js
 ## License
 
 Copyright (C) 2013 - 2021 Rob Wu <rob@robwu.nl>
+Copyright (C) 2025 Lucas Johnston Kurilov <lucas@lucasco.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
