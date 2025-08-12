@@ -1,9 +1,11 @@
 ## vercel-cors
 
-> [!NOTE] This is a minimal fork of the popular `cors-anywhere` library, with one-click deployment for Vercel.
+> [!NOTE]
+> This is a minimal fork of the popular `cors-anywhere` library, with one-click deployment for Vercel.
 > It wraps the CORS Anywhere package in a simple `api/index.js` file, so it can be deployed to Vercel easily. We pass everything through – headers, cookies, the works.
 
-> [!CAUTION] The URL format is different to the original repo.
+> [!CAUTION]
+> The URL format is different to the original repo.
 > Not much has changed, but we use the following format:
 > `http://myvercel.deployment/?url=[YOUR_URL_HERE]`
 > 
